@@ -47,7 +47,6 @@ class TodoContainer extends React.Component {
       todos: todos.map((todo) => {
         if (todo.id === id) {
           todo.completed = !todo.completed; // eslint-disable-line no-param-reassign
-          // console.log('clicked ', todo.completed);
         }
         return todo;
       }),

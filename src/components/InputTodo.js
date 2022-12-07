@@ -27,8 +27,11 @@ class InputTodo extends Component {
 
   render() {
     const { title } = this.state;
+    const formStyle = {
+      marginLeft: '20px',
+    };
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} style={formStyle}>
         <input
           type="text"
           placeholder="Add todo..."
@@ -36,14 +39,16 @@ class InputTodo extends Component {
           name="title"
           onChange={this.onChange}
         />
-        <button type="submit">Submit</button>
+        <button
+          type="submit"
+        >
+          Submit
+        </button>
       </form>
     );
   }
 }
 InputTodo.propTypes = {
   addTodoProps: PropTypes.func.isRequired,
-  /* deleteTodoProps: PropTypes.func.isRequired,
-  handleUpdate: PropTypes.func.isRequired, */
 };
 export default InputTodo;
